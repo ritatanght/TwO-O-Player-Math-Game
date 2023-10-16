@@ -1,5 +1,5 @@
 class Turn
-  attr_reader :current_answer, :current_player, :game_over, :players
+  attr_reader :current_player, :game_over, :players
 
   def initialize(player1, player2)
     @players = [player1, player2]
