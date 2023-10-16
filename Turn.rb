@@ -23,12 +23,15 @@ class Turn
     print "> "
     player_answer = gets.chomp
     check_answer(player_answer)
-    switch_turn
   end
 
   def switch_turn
     next_player_index = @current_player == @players[0]? 1: 0
     @current_player = @players[next_player_index]
+  end
+
+  def display_score
+    puts "P#{@players[0]}: #{@players[0].player_score} vs P#{@players[1]}: #{@players[1].player_score}"
   end
 
   def check_answer(player_answer)
